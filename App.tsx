@@ -1,5 +1,10 @@
 import { StatusBar } from 'react-native'
-import { Home } from './src/screens/Home'
+
+import 'react-native-gesture-handler';
+import { NavigationContainer } from "@react-navigation/native";
+
+import { Routes } from './src/routes/index'
+
 export default function App(){
   return(
     <>
@@ -8,7 +13,9 @@ export default function App(){
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
     </>
 
   )
